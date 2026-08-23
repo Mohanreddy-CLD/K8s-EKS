@@ -34,7 +34,7 @@ spec:
         # Critical for MuleSoft: Define exact limits to prevent OOM Kills
         resources:
           requests:
-            memory: "1Gi"
+            memory: "1Gi" 
             cpu: "500m"
           limits:
             memory: "2Gi"
