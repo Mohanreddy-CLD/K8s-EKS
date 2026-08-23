@@ -1,0 +1,17 @@
+apiVersion: v1
+kind: Pod
+metadata:
+  name: affinity-demo
+spec:
+  affinity:
+    nodeAffinity:
+      requiredDuringschudulingIgnoreedDuringExecution:
+        nodeSelectorTerms:
+        - matchexpressions:
+          - key: hardware
+            operator: NotIn
+            values:
+            - gpu
+  containers:
+  - name: with-node-anti-affinity
+    image: nginx
