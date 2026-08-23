@@ -28,7 +28,7 @@ spec:
             topologyKey: "kubernetes.io/hostname"
       containers:
       - name: mulesoft-runtime
-        image: your-acr.azurecr.io/mulesoft-app:v1.0.0
+        image: mule-acr.azurecr.io/mulesoft-app:v1.0.0
         ports:
         - containerPort: 8081
         # Critical for MuleSoft: Define exact limits to prevent OOM Kills
