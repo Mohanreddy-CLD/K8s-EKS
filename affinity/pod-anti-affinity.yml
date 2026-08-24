@@ -19,10 +19,9 @@ metadata:
     purpose: pod-affinity
 spec:
   affinity:
-    podaffinity:
-      preferredDuringSchedulingIgnoredDuringExecution:
-      - weight: 100
-        labelSelector:
+    podAntiAffinity:
+      requiredDuringSchedulingIgnoredDuringExecution:
+      - labelSelector:
           matchExpressions:
           - key: app-name
             operator: In
